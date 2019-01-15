@@ -1,5 +1,5 @@
 module "ecr" {
-  source = "../../"
+  source  = "../../"
   name   = "${var.name}"
   region = "${var.region}"
 }
