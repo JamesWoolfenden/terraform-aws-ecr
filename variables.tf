@@ -8,6 +8,11 @@ variable "name" {
   description = "The name of the registry"
 }
 
+variable "repositorypolicy" {
+  type        = "string"
+  description = "Pass this variable a Json Policy"
+}
+
 variable depends_on {
   default     = []
   description = "This is a way to make a module depends on, which isnt built in."
