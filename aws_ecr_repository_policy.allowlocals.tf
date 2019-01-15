@@ -20,11 +20,11 @@ data "aws_iam_policy_document" "allowlocals" {
 
     principals {
       type        = "AWS"
-      identifiers = ["arn:aws:iam::553700203877:*"]
+      identifiers = ["arn:aws:iam::${data.aws_caller_identity.current.account_id}:*"]
     }
 
     resources = [
-      "arn:aws:s3:::*",
+      "arn:aws:s3:::*"
     ]
   }
 }
