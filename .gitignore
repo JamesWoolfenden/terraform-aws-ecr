@@ -5,6 +5,15 @@
 *.tfstate
 *.tfstate.*
 
-# .tfvars files
-*.tfvars
+# Module directory
+.terraform
+.idea
+*.iml
+.build-harness
+build-harness
+*.ini
+
+*~HEAD
+*backup
+
 *.orig
