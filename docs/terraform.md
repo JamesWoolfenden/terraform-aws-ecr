@@ -15,3 +15,4 @@
 | ecr_host | - |
 | ecr_repo_name | - |
 | ecr_repository_url | - |
+
