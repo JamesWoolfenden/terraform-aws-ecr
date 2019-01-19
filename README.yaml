@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name: terraform-aws-codecommit
+name: terraform-aws-ecr
 
 # Tags of this project
 tags:
