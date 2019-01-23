@@ -4,25 +4,13 @@
 
 # terraform-aws-ecr [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-ecr.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-ecr) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ecr.svg)](https://github.com/JamesWoolfenden/terraform-aws-ecr/releases/latest)
 
-
 Terraform module to provision an AWS [`Elastic Container Registry`](https://aws.amazon.com/ecr/).
-
 
 ---
 
 This project uses the "build-harness" a modified version of the project ["SweetOps"](https://cpco.io/sweetops) from Cloudposse. Sweet indeed.
 
-
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
-
-
-
-
-
-
-
-
-
 
 ## Usage
 
@@ -38,21 +26,18 @@ module "ecr" {
 }
 ```
 
-
-
-
-
-
 ## Makefile Targets
+
 ```make
 Available targets:
 
   help/all:                          Display help for all targets
-  help/short:                        This help short screen
-  help:                              Help screen
-  lint:                              Lint terraform code
+  help/short:                          This help short screen
+  help:                          Help screen
+  lint:                          Lint terraform code
 
 ```
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -71,21 +56,16 @@ Available targets:
 | ecr_repo_name | - |
 | ecr_repository_url | - |
 
-## Usage
+## Information
 
 A terraform module to create a container registry (ECR - Elastic Container Registry) in AWS
 There are tow policies attached, a lifecycle policy which details how to look after the containers and a permission policy which has a default allow allusers in the account.
-
-
 
 ## Related Projects
 
 Check out these related projects.
 
 - [terraform-aws-codebuild](https://github.com/jameswoolfenden/terraform-aws-codebuild) - Making a Build pipeline
-
-
-
 
 ## Help
 
@@ -99,16 +79,9 @@ File a GitHub [issue](https://github.com/jameswoolfenden/terraform-aws-ecr/issue
 
 Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-ecr/issues) to report any bugs or file feature requests.
 
-
-
 ## Copyrights
 
 Copyright © 2019-2019 [Slalom, LLC](https://slalom.com)
-
-
-
-
-
 
 ## License
 
@@ -135,8 +108,7 @@ See [LICENSE](LICENSE) for full details.
 
 ### Contributors
 
-|  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
-|---|
+  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] 
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
