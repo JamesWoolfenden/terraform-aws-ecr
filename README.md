@@ -39,20 +39,6 @@ module "ecr" {
 ```
 
 
-
-
-
-
-## Makefile Targets
-```make
-Available targets:
-
-  help/all:                          Display help for all targets
-  help/short:                        This help short screen
-  help:                              Help screen
-  lint:                              Lint terraform code
-
-```
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -99,16 +85,9 @@ File a GitHub [issue](https://github.com/jameswoolfenden/terraform-aws-ecr/issue
 
 Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-ecr/issues) to report any bugs or file feature requests.
 
-
-
 ## Copyrights
 
 Copyright © 2019-2019 [Slalom, LLC](https://slalom.com)
-
-
-
-
-
 
 ## License
 
@@ -135,8 +114,8 @@ See [LICENSE](LICENSE) for full details.
 
 ### Contributors
 
-|  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
-|---|
+  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
+
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
