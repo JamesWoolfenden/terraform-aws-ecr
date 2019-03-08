@@ -19,3 +19,8 @@ variable depends_on {
   description = "This is a way to make a module depends on, which isnt built in."
   type        = "list"
 }
+
+variable "common_tags" {
+  type        = "map"
+  description = "Implements the common tags scheme"
+}

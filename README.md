@@ -26,12 +26,11 @@ module "ecr" {
 }
 ```
 
-
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
+| common_tags | Implements the common tags scheme | map | - | yes |
 | depends_on | This is a way to make a module depends on, which isnt built in. | list | `<list>` | no |
 | name | The name of the registry | string | - | yes |
 | region | The region to create your registry in. | string | - | yes |
@@ -41,15 +40,16 @@ module "ecr" {
 
 | Name | Description |
 |------|-------------|
-| ecr_arn | - |
-| ecr_host | - |
-| ecr_repo_name | - |
-| ecr_repository_url | - |
+| ecr_arn | The Amazon resource name for the repository |
+| ecr_host | The host where the registry/containers are |
+| ecr_repo_name | The name of the repository |
+| ecr_repository_url | The URL of your new registry |
 
 ## Information
 
 A terraform module to create a container registry (ECR - Elastic Container Registry) in AWS
-There are tow policies attached, a lifecycle policy which details how to look after the containers and a permission policy which has a default allow allusers in the account.
+There are two policies attached, a life-cycle policy which details how to look after the containers and a permission policy which has a default allow allusers in the account.
+I use this to store the customised containers I use in Codebuild and for storing containers for Fargate.
 
 ## Related Projects
 
@@ -99,7 +99,6 @@ See [LICENSE](LICENSE) for full details.
 ### Contributors
 
   [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
-
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
