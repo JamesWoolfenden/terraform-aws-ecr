@@ -19,10 +19,10 @@ Include this repository as a module in your existing terraform code:
 ```hcl
 module "ecr" {
   source           = "github.com/JamesWoolfenden/terraform-aws-ecr"
-  name             = "${var.name}"
-  region           = "${var.region}"
-  repositorypolicy = "${data.aws_iam_policy_document.allowlocals.json}"
-  depends_on       = ["${aws_iam_group.developer.group_name}"]
+  name             = var.name
+  region           = var.region
+  repositorypolicy = data.aws_iam_policy_document.allowlocals.json
+  depends_on       = [aws_iam_group.developer.group_name]
 }
 ```
 
