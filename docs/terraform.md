@@ -2,6 +2,7 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
+| common_tags | Implements the common tags scheme | map | - | yes |
 | depends_on | This is a way to make a module depends on, which isnt built in. | list | `<list>` | no |
 | name | The name of the registry | string | - | yes |
 | region | The region to create your registry in. | string | - | yes |
@@ -11,8 +12,8 @@
 
 | Name | Description |
 |------|-------------|
-| ecr_arn | - |
-| ecr_host | - |
-| ecr_repo_name | - |
-| ecr_repository_url | - |
+| ecr_arn | The Amazon resource name for the repository |
+| ecr_host | The host where the registry/containers are |
+| ecr_repo_name | The name of the repository |
+| ecr_repository_url | The URL of your new registry |
 
