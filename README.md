@@ -15,7 +15,6 @@ Include this repository as a module in your existing terraform code:
 module "ecr" {
   source           = "github.com/JamesWoolfenden/terraform-aws-ecr"
   name             = var.name
-  region           = var.region
   repositorypolicy = data.aws_iam_policy_document.allowlocals.json
 }
 ```
@@ -34,9 +33,9 @@ module "ecr" {
 | Name | Description |
 |------|-------------|
 | ecr\_arn | The Amazon resource name for the repository |
-| ecr\_host | The host where the registry/containers are |
 | ecr\_repo\_name | The name of the repository |
 | ecr\_repository\_url | The URL of your new registry |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Information
 

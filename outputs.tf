@@ -1,8 +1,3 @@
-output "ecr_host" {
-  description = "The host where the registry/containers are"
-  value       = "${aws_ecr_repository.repository.registry_id}.dkr.ecr.${data.aws_region.current.name}.amazonaws.com"
-}
-
 output "ecr_repo_name" {
   description = "The name of the repository"
   value       = aws_ecr_repository.repository.name
