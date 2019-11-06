@@ -11,9 +11,10 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 Include this repository as a module in your existing terraform code:
 
-```hcl
-module "ecr" {
+```terraform
+module ecr {
   source           = "github.com/JamesWoolfenden/terraform-aws-ecr"
+  version          = "0.2.21"
   name             = var.name
   repositorypolicy = data.aws_iam_policy_document.allowlocals.json
 }
