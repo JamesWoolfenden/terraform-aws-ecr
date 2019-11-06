@@ -26,8 +26,10 @@ module ecr {
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | common\_tags | Implements the common tags scheme | map | n/a | yes |
+| image\_tag\_mutability |  | string | `"IMMUTABLE"` | no |
 | name | The name of the registry | string | n/a | yes |
 | repositorypolicy | Pass this variable a Json Policy | string | n/a | yes |
+| scan\_on\_push |  | bool | `"true"` | no |
 
 ## Outputs
 
