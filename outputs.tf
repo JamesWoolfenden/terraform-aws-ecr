@@ -12,3 +12,8 @@ output "ecr_repository_url" {
   description = "The URL of your new registry"
   value       = aws_ecr_repository.repository.repository_url
 }
+
+output "ecr" {
+  description = "The full details of the repo"
+  value       = aws_ecr_repository.repository
+}

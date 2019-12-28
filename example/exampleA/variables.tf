@@ -1,9 +1,9 @@
 variable "name" {
-  type        = "string"
+  type        = string
   description = "The name of the registry"
 }
 
 variable "common_tags" {
-  type        = "map"
+  type        = map
   description = "Implements the common tags scheme"
 }

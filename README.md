@@ -35,6 +35,7 @@ module ecr {
 
 | Name | Description |
 |------|-------------|
+| ecr | The full details of the repo |
 | ecr\_arn | The Amazon resource name for the repository |
 | ecr\_repo\_name | The name of the repository |
 | ecr\_repository\_url | The URL of your new registry |

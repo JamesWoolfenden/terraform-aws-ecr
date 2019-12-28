@@ -12,3 +12,8 @@ output "ecr_repository_url" {
   description = "The URL of your new registry"
   value       = module.ecr.ecr_repository_url
 }
+
+output "ecr" {
+  description = "The full details of the repo"
+  value       = module.ecr.ecr
+}
