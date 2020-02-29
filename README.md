@@ -1,6 +1,11 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-ecr [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-ecr.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-ecr) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ecr.svg)](https://github.com/JamesWoolfenden/terraform-aws-ecr/releases/latest)
+# terraform-aws-ecr
+
+[![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-ecr.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-ecr)
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ecr.svg)](https://github.com/JamesWoolfenden/terraform-aws-ecr/releases/latest)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
 Terraform module to provision an AWS [`Elastic Container Registry`](https://aws.amazon.com/ecr/).
 
@@ -21,15 +26,21 @@ module ecr {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| common\_tags | Implements the common tags scheme | map | n/a | yes |
-| image\_tag\_mutability |  | string | `"IMMUTABLE"` | no |
-| name | The name of the registry | string | n/a | yes |
-| repositorypolicy | Pass this variable a Json Policy | string | n/a | yes |
-| scan\_on\_push |  | bool | `"true"` | no |
+|------|-------------|------|---------|:-----:|
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| image\_tag\_mutability | n/a | `string` | `"IMMUTABLE"` | no |
+| name | The name of the registry | `string` | n/a | yes |
+| repositorypolicy | Pass this variable a Json Policy | `string` | n/a | yes |
+| scan\_on\_push | n/a | `bool` | `true` | no |
 
 ## Outputs
 
@@ -67,7 +78,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2019 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
 
 ## License
 
@@ -94,11 +105,10 @@ under the License.
 
 ### Contributors
 
-  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
+[![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
 
-  [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
-  [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-
+[jameswoolfenden_homepage]: https://github.com/jameswoolfenden
+[jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
