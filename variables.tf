@@ -14,11 +14,13 @@ variable "common_tags" {
 }
 
 variable "image_tag_mutability" {
-  type    = string
-  default = "IMMUTABLE"
+  description = "For sone strange reason this is optional behaviour."
+  type        = string
+  default     = "IMMUTABLE"
 }
 
 variable "scan_on_push" {
-  type    = bool
-  default = true
+  description = "Security Scan your new container before you add it to the registry"
+  type        = bool
+  default     = true
 }

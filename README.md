@@ -2,7 +2,7 @@
 
 # terraform-aws-ecr
 
-[![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-ecr.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-ecr)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-ecr/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-ecr)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ecr.svg)](https://github.com/JamesWoolfenden/terraform-aws-ecr/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
@@ -37,10 +37,10 @@ module ecr {
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
 | common\_tags | Implements the common tags scheme | `map` | n/a | yes |
-| image\_tag\_mutability | n/a | `string` | `"IMMUTABLE"` | no |
+| image\_tag\_mutability | For sone strange reason this is optional behaviour. | `string` | `"IMMUTABLE"` | no |
 | name | The name of the registry | `string` | n/a | yes |
 | repositorypolicy | Pass this variable a Json Policy | `string` | n/a | yes |
-| scan\_on\_push | n/a | `bool` | `true` | no |
+| scan\_on\_push | Security Scan your new container before you add it to the registry | `bool` | `true` | no |
 
 ## Outputs
 
