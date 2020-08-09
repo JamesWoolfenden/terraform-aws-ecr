@@ -5,12 +5,14 @@
 [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-ecr/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-ecr)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ecr.svg)](https://github.com/JamesWoolfenden/terraform-aws-ecr/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
+[![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
 Terraform module to provision an AWS [`Elastic Container Registry`](https://aws.amazon.com/ecr/).
 
 ---
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
+
+![alt text](./diagram/registry.png)
 
 ## Usage
 
@@ -19,14 +21,42 @@ Include this repository as a module in your existing terraform code:
 ```terraform
 module ecr {
   source           = "github.com/JamesWoolfenden/terraform-aws-ecr"
-  version          = "0.2.21"
+  version          = "v0.2.30"
   name             = var.name
   repositorypolicy = data.aws_iam_policy_document.allowlocals.json
 }
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-Error: no lines in file
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| image\_tag\_mutability | For sone strange reason this is optional behaviour. | `string` | `"IMMUTABLE"` | no |
+| name | The name of the registry | `string` | n/a | yes |
+| repositorypolicy | Pass this variable a Json Policy | `string` | n/a | yes |
+| scan\_on\_push | Security Scan your new container before you add it to the registry | `bool` | `true` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| ecr | The full details of the repo |
+| ecr\_arn | The Amazon resource name for the repository |
+| ecr\_repo\_name | The name of the repository |
+| ecr\_repository\_url | The URL of your new registry |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Information
 
