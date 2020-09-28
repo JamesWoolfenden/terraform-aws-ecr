@@ -1,5 +1,3 @@
-[![Slalom][logo]](https://slalom.com)
-
 # terraform-aws-ecr
 
 [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-ecr/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-ecr)
@@ -10,6 +8,7 @@
 Terraform module to provision an AWS [`Elastic Container Registry`](https://aws.amazon.com/ecr/).
 
 ---
+
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ![alt text](./diagram/registry.png)
@@ -28,6 +27,7 @@ module ecr {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
@@ -35,29 +35,30 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
-| aws | n/a |
+| ---- | ------- |
+| aws  | n/a     |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
-| image\_tag\_mutability | For sone strange reason this is optional behaviour. | `string` | `"IMMUTABLE"` | no |
-| name | The name of the registry | `string` | n/a | yes |
-| repositorypolicy | Pass this variable a Json Policy | `string` | n/a | yes |
-| scan\_on\_push | Security Scan your new container before you add it to the registry | `bool` | `true` | no |
+| Name                 | Description                                                        | Type     | Default       | Required |
+| -------------------- | ------------------------------------------------------------------ | -------- | ------------- | :------: |
+| common_tags          | Implements the common tags scheme                                  | `map`    | n/a           |   yes    |
+| image_tag_mutability | For sone strange reason this is optional behaviour.                | `string` | `"IMMUTABLE"` |    no    |
+| name                 | The name of the registry                                           | `string` | n/a           |   yes    |
+| repositorypolicy     | Pass this variable a Json Policy                                   | `string` | n/a           |   yes    |
+| scan_on_push         | Security Scan your new container before you add it to the registry | `bool`   | `true`        |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| ecr | The full details of the repo |
-| ecr\_arn | The Amazon resource name for the repository |
-| ecr\_repo\_name | The name of the repository |
-| ecr\_repository\_url | The URL of your new registry |
+| Name               | Description                                 |
+| ------------------ | ------------------------------------------- |
+| ecr                | The full details of the repo                |
+| ecr_arn            | The Amazon resource name for the repository |
+| ecr_repo_name      | The name of the repository                  |
+| ecr_repository_url | The URL of your new registry                |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Information
 
 A terraform module to create a container registry (ECR - Elastic Container Registry) in AWS.
@@ -84,7 +85,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2020 James Woolfenden
 
 ## License
 
@@ -93,19 +94,19 @@ Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
 See [LICENSE](LICENSE) for full details.
 
 Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
+or more contributor license agreements. See the NOTICE file
 distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
+regarding copyright ownership. The ASF licenses this file
 to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
+with the License. You may obtain a copy of the License at
 
 <https://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
 "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
+KIND, either express or implied. See the License for the
 specific language governing permissions and limitations
 under the License.
 
@@ -115,12 +116,9 @@ under the License.
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-[logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
-[website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
 [linkedin]: https://www.linkedin.com/in/jameswoolfenden/
 [twitter]: https://twitter.com/JimWoolfenden
-
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-ecr&url=https://github.com/jameswoolfenden/terraform-aws-ecr
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-ecr&url=https://github.com/jameswoolfenden/terraform-aws-ecr
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/jameswoolfenden/terraform-aws-ecr
