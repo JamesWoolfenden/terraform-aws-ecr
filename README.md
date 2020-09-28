@@ -27,7 +27,6 @@ module ecr {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -35,27 +34,27 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name                 | Description                                                        | Type     | Default       | Required |
-| -------------------- | ------------------------------------------------------------------ | -------- | ------------- | :------: |
-| common_tags          | Implements the common tags scheme                                  | `map`    | n/a           |   yes    |
-| image_tag_mutability | For sone strange reason this is optional behaviour.                | `string` | `"IMMUTABLE"` |    no    |
-| name                 | The name of the registry                                           | `string` | n/a           |   yes    |
-| repositorypolicy     | Pass this variable a Json Policy                                   | `string` | n/a           |   yes    |
-| scan_on_push         | Security Scan your new container before you add it to the registry | `bool`   | `true`        |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| image\_tag\_mutability | For sone strange reason this is optional behaviour. | `string` | `"IMMUTABLE"` | no |
+| name | The name of the registry | `string` | n/a | yes |
+| repositorypolicy | Pass this variable a Json Policy | `string` | n/a | yes |
+| scan\_on\_push | Security Scan your new container before you add it to the registry | `bool` | `true` | no |
 
 ## Outputs
 
-| Name               | Description                                 |
-| ------------------ | ------------------------------------------- |
-| ecr                | The full details of the repo                |
-| ecr_arn            | The Amazon resource name for the repository |
-| ecr_repo_name      | The name of the repository                  |
-| ecr_repository_url | The URL of your new registry                |
+| Name | Description |
+|------|-------------|
+| ecr | The full details of the repo |
+| ecr\_arn | The Amazon resource name for the repository |
+| ecr\_repo\_name | The name of the repository |
+| ecr\_repository\_url | The URL of your new registry |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
