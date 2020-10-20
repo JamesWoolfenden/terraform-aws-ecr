@@ -27,10 +27,6 @@ module ecr {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Requirements
-
-No requirements.
-
 ## Providers
 
 | Name | Version |
@@ -40,7 +36,7 @@ No requirements.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+|------|-------------|------|---------|:-----:|
 | common\_tags | Implements the common tags scheme | `map` | n/a | yes |
 | image\_tag\_mutability | For sone strange reason this is optional behaviour. | `string` | `"IMMUTABLE"` | no |
 | name | The name of the registry | `string` | n/a | yes |
