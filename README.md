@@ -9,9 +9,11 @@
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-apigateway/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-apigateway&benchmark=INFRASTRUCTURE+SECURITY)
 
-Terraform module to provision an AWS [`Elastic Container Registry`](https://aws.amazon.com/ecr/).
-
 ---
+Terraform ECR
+
+Terraform module to provision an AWS [`Elastic Container Registry`](https://aws.amazon.com/ecr/)
+This registry is IMMUTABLE, you cannot push "latest" twice.
 
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
@@ -19,7 +21,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
 
-Include this repository as a module in your existing terraform code:
+Include this repository as a module in your existing Terraform code:
 
 ```terraform
 module ecr {
@@ -28,6 +30,74 @@ module ecr {
   name             = var.name
   repositorypolicy = data.aws_iam_policy_document.allowlocals.json
 }
+```
+
+### Logging-in to ECR
+
+First get your account number with:
+
+```shell
+aws sts get-caller-identity
+```
+
+Then use that to login with:
+
+*aws ecr get-login-password --region eu-west-2 | docker login  --username AWS  --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com*
+
+```shell
+aws ecr get-login-password --region eu-west-2 | docker login  --username AWS  --password-stdin 481212720429.dkr.ecr.eu-west-2.amazonaws.com
+```
+
+Now build your Dockerfile
+
+```Dockerfile
+FROM alpine:3.5
+```
+
+```shell
+$docker build .
+$docker images                               ✔ │ 4s │ 11:41:46 
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+<none>       <none>    bb8a493bc0a0   24 months ago   4MB
+```
+
+Then tag the image:
+
+```shell
+docker tag bb8a493bc0a0  481212720429.dkr.ecr.eu-west-2.amazonaws.com/node-terraform
+```
+
+WARNING:This used the "latest" tag up and as this repo is immutable you cannot use it twice.
+
+```shell
+docker push 481212720429.dkr.ecr.eu-west-2.amazonaws.com/node-terraform
+docker push 481212720429.dkr.ecr.eu-west-2.amazonaws.com/node-terraform
+Using default tag: latest
+The push refers to repository [481212720429.dkr.ecr.eu-west-2.amazonaws.com/node-terraform]
+f566c57e6f2d: Pushed
+```
+
+## Update Docker file
+
+Add this to the Dockerfile:
+
+```Dockerfile
+RUN apk add --update py2-pip
+```
+
+Build it and get image - cce562ae9658
+
+Tag it the same and try to push it:
+
+```shell
+docker tag cce562ae9658  481212720429.dkr.ecr.eu-west-2.amazonaws.com/node-terraform
+
+docker push 481212720429.dkr.ecr.eu-west-2.amazonaws.com/node-terraform
+
+The push refers to repository [481212720429.dkr.ecr.eu-west-2.amazonaws.com/node-terraform]
+75867783c8d9: Pushed
+f566c57e6f2d: Layer already exists
+tag invalid: The image tag 'latest' already exists in the 'node-terraform' repository and cannot be overwritten because the repository is immutable.
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
