@@ -1,7 +1,7 @@
 # Compiled files
 *.tfstate
 *.tfstate.backup
-
+.DS_Store
 # Module directory
 .terraform
 __pycache__
