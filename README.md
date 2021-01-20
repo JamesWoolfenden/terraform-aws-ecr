@@ -10,10 +10,9 @@
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-apigateway/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-apigateway&benchmark=INFRASTRUCTURE+SECURITY)
 
 ---
-Terraform ECR
-
 Terraform module to provision an AWS [`Elastic Container Registry`](https://aws.amazon.com/ecr/)
-This registry is IMMUTABLE, you cannot push "latest" twice.
+
+This registry is immutable, so you cannot push the "latest" container twice.
 
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
