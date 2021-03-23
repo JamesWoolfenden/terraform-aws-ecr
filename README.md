@@ -110,11 +110,23 @@ No requirements.
 |------|---------|
 | aws | n/a |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_ecr_lifecycle_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_lifecycle_policy) |
+| [aws_ecr_repository](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository) |
+| [aws_ecr_repository_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository_policy) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map(any)` | n/a | yes |
 | image\_tag\_mutability | For sone strange reason this is optional behaviour. | `string` | `"IMMUTABLE"` | no |
 | name | The name of the registry | `string` | n/a | yes |
 | repositorypolicy | Pass this variable a Json Policy | `string` | n/a | yes |
@@ -128,7 +140,6 @@ No requirements.
 | ecr\_arn | The Amazon resource name for the repository |
 | ecr\_repo\_name | The name of the repository |
 | ecr\_repository\_url | The URL of your new registry |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Information
