@@ -4,3 +4,5 @@ common_tags = {
   name      = "terraform-aws-ecr"
   author    = "James Woolfenden"
 }
+
+kms_key = ""

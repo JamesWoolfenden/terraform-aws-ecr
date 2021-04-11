@@ -7,3 +7,7 @@ variable "common_tags" {
   type        = map(any)
   description = "Implements the common tags scheme"
 }
+
+variable "kms_key" {
+  type = string
+}
