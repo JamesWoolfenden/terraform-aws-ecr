@@ -1,0 +1,4 @@
+version: 0.1
+resource_usage:
+  module.ecr.aws_ecr_repository.repository:
+    storage_gb: 0
