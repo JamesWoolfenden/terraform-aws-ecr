@@ -31,6 +31,38 @@ module ecr {
 }
 ```
 
+## Costs
+
+```text
+Monthly cost estimate
+
+Project: .
+
+ Name                                                   Monthly Qty  Unit            Monthly Cost
+
+ module.ecs.aws_efs_file_system.examplea
+ └─ Storage (standard)                                Cost depends on usage: $0.33 per GB-months
+
+ module.ecs.aws_elb.admin
+ ├─ Classic load balancer                                       730  hours                 $21.46
+ └─ Data processed                                    Cost depends on usage: $0.0084 per GB
+
+ module.ecs.aws_elb.appstore
+ ├─ Classic load balancer                                       730  hours                 $21.46
+ └─ Data processed                                    Cost depends on usage: $0.0084 per GB
+
+ module.ecs.aws_instance.docker_host
+ ├─ Instance usage (Linux/UNIX, on-demand, t3.micro)            730  hours                  $8.61
+ ├─ EC2 detailed monitoring                                       7  metrics                $2.10
+ ├─ CPU credits                                                   0  vCPU-hours             $0.00
+ └─ root_block_device
+    ├─ Storage (magnetic)                                       100  GB-months              $5.80
+    └─ I/O requests                                   Cost depends on usage: $0.06 per 1M request
+
+ PROJECT TOTAL                                                                             $59.44
+```
+
+
 ### Logging-in to ECR
 
 First get your account number with:
