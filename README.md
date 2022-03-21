@@ -132,16 +132,15 @@ tag invalid: The image tag 'latest' already exists in the 'node-terraform' repos
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                             | Version |
-| ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -149,33 +148,32 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                  | Type     |
-| ------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| [aws_ecr_lifecycle_policy.cleanup](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_lifecycle_policy)  | resource |
-| [aws_ecr_repository.repository](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository)           | resource |
+| Name | Type |
+|------|------|
+| [aws_ecr_lifecycle_policy.cleanup](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_lifecycle_policy) | resource |
+| [aws_ecr_repository.repository](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository) | resource |
 | [aws_ecr_repository_policy.policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository_policy) | resource |
 
 ## Inputs
 
-| Name                                                                                          | Description                                                        | Type       | Default       | Required |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------- | ------------- | :------: |
-| <a name="input_common_tags"></a> [common_tags](#input_common_tags)                            | Implements the common tags scheme                                  | `map(any)` | n/a           |   yes    |
-| <a name="input_encryption_type"></a> [encryption_type](#input_encryption_type)                | n/a                                                                | `string`   | `"KMS"`       |    no    |
-| <a name="input_image_tag_mutability"></a> [image_tag_mutability](#input_image_tag_mutability) | For sone strange reason this is optional behaviour.                | `string`   | `"IMMUTABLE"` |    no    |
-| <a name="input_kms_key"></a> [kms_key](#input_kms_key)                                        | n/a                                                                | `string`   | n/a           |   yes    |
-| <a name="input_name"></a> [name](#input_name)                                                 | The name of the registry                                           | `string`   | n/a           |   yes    |
-| <a name="input_repositorypolicy"></a> [repositorypolicy](#input_repositorypolicy)             | Pass this variable a Json Policy                                   | `string`   | n/a           |   yes    |
-| <a name="input_scan_on_push"></a> [scan_on_push](#input_scan_on_push)                         | Security Scan your new container before you add it to the registry | `bool`     | `true`        |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implements the common tags scheme | `map(any)` | n/a | yes |
+| <a name="input_encryption_type"></a> [encryption\_type](#input\_encryption\_type) | n/a | `string` | `"KMS"` | no |
+| <a name="input_image_tag_mutability"></a> [image\_tag\_mutability](#input\_image\_tag\_mutability) | For sone strange reason this is optional behaviour. | `string` | `"IMMUTABLE"` | no |
+| <a name="input_kms_key"></a> [kms\_key](#input\_kms\_key) | n/a | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | The name of the registry | `string` | n/a | yes |
+| <a name="input_repositorypolicy"></a> [repositorypolicy](#input\_repositorypolicy) | Pass this variable a Json Policy | `string` | n/a | yes |
+| <a name="input_scan_on_push"></a> [scan\_on\_push](#input\_scan\_on\_push) | Security Scan your new container before you add it to the registry | `bool` | `true` | no |
 
 ## Outputs
 
-| Name                                                                                      | Description                                 |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------- |
-| <a name="output_ecr"></a> [ecr](#output_ecr)                                              | The full details of the repo                |
-| <a name="output_ecr_arn"></a> [ecr_arn](#output_ecr_arn)                                  | The Amazon resource name for the repository |
-| <a name="output_ecr_repo_name"></a> [ecr_repo_name](#output_ecr_repo_name)                | The name of the repository                  |
-| <a name="output_ecr_repository_url"></a> [ecr_repository_url](#output_ecr_repository_url) | The URL of your new registry                |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_ecr"></a> [ecr](#output\_ecr) | The full details of the repo |
+| <a name="output_ecr_arn"></a> [ecr\_arn](#output\_ecr\_arn) | The Amazon resource name for the repository |
+| <a name="output_ecr_repo_name"></a> [ecr\_repo\_name](#output\_ecr\_repo\_name) | The name of the repository |
+| <a name="output_ecr_repository_url"></a> [ecr\_repository\_url](#output\_ecr\_repository\_url) | The URL of your new registry |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Information
