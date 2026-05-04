@@ -198,7 +198,9 @@ resource "aws_iam_policy" "terraform_pike" {
             "Action": [
                 "ec2:DescribeAccountAttributes"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
@@ -218,16 +220,21 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ecr:TagResource",
                 "ecr:UntagResource"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor2",
             "Effect": "Allow",
             "Action": [
                 "kms:CreateGrant",
-                "kms:DescribeKey"
+                "kms:DescribeKey",
+                "kms:RetireGrant"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
