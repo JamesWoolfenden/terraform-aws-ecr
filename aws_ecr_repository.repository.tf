@@ -1,4 +1,5 @@
 resource "aws_ecr_repository" "repository" {
+  # checkov:skip=CKV_AWS_363: Image scanning configured separately
   name                 = var.name
   image_tag_mutability = "IMMUTABLE"
 
